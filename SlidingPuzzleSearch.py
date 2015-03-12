@@ -92,7 +92,7 @@ class Node:
             actual_y = ((self.data[i+1])/getSQRTSize())
 
             ##Manhattan Distance with a multiplier giving special interest to top left problems
-            amt = (abs(expected_x-actual_x) + abs(expected_y-actual_y) ) * ((expected_x)+(expected_y))
+            amt = (abs(expected_x-actual_x) + abs(expected_y-actual_y) ) * ((getSQRTSize()-expected_x)+(getSQRTSize()-expected_y))
 
             total += amt
         return total
@@ -340,7 +340,7 @@ def AStar(init,toFind):
     while(queue.empty() == False ):
         t = queue.get()
 
-        if clock() - last_time > 5:
+        if clock() - last_time > 15:
             print "getHeuristic: ",t.getHeuristic()
             print t
             last_time = clock()

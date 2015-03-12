@@ -92,6 +92,7 @@ def getNumberImage(row=0,col=0,filename='number'):
     im = ImageGrab.grab(box)
     #print "Time: "+datetime.datetime.now().time()
     #url = os.path.abspath(os.path.dirname(__file__)) + '\\'+filename+'.png'
+    #im.save(url,'PNG')
     return im
 
 global images
@@ -164,28 +165,22 @@ Number_width and height are the width and height of each block
 padding is the padding between each number block
 
 '''
+
+
 start_x = 116
 start_y = 367
+
 width = 299
 height = 299
 
 number_width = 98
 number_height = 98
 number_padding = 2
-
-
-
 loadImages()
 
 a = getBoardConfiguration()
-
-
 b = [1,2,3,4,5,6,7,8,-1]
 
-
-t = Node(None,b)
-
-print a,b
 g = AStar(a,b)
 
 if g is False:
