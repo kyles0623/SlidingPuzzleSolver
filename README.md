@@ -1,5 +1,12 @@
 # SlidingPuzzleSolver
-Solves Sliding Puzzle game at http://mypuzzle.org/sliding
+I was bored and decided to make a program that solves the sliding puzzle at http://mypuzzle.org/sliding
+
+I used A* Search with g(x) being the moves since origin and h(x) being the manhattan distance of each block from its expected position.
+
+You can use this on your machine if you can pinpoint the x,y coordinates of the puzzle on your screen.
+
+I used PIL for the image retrieval and winapi32 for the mouse clicking. 
+I have raw copies of the numbers on the board so when the images are initially taken from the board, I can figure out which is which without number recognition software.
 
 
 <h2>Requirements:</h2>
